@@ -9,10 +9,8 @@ DATA_PATH = "data_10.json"
 
 def load_data(data_path):
     """Loads training dataset from json file.
-
-        :param data_path (str): Path to json file containing data
-        :return X (ndarray): Inputs
-        :return y (ndarray): Targets
+    X (ndarray): Inputs
+    y (ndarray): Targets
     """
 
     with open(data_path, "r") as fp:
