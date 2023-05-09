@@ -1,5 +1,8 @@
-# Music_gerne_classification using deep learning
-This project havw used the GTZAN dataset which consists of 1000 songs of different genres in a managed order. The data set we have used has the song samples divided into ten genres naming: *disco, metal, reggae, blues, rock, classical, jazz, hip-hop, country and pop.*
+# Music Gerne Classification using deep learning
+
+The GTZAN dataset is a widely used music genre classification dataset in the field of machine learning and music information retrieval. It was created by George Tzanetakis and Perry Cook in 2002 and is named after their initials. The data set we have used has the song samples divided into ten genres naming: *disco, metal, reggae, blues, rock, classical, jazz, hip-hop, country and pop.*
+
+Each audio track in the GTZAN dataset is sampled at 44.1kHz and is saved in uncompressed WAV format. The dataset also comes with metadata for each track, such as the artist, title, and genre label. The GTZAN dataset has been widely used to develop and evaluate music genre classification algorithms and has become a benchmark for comparing different methods.
 
 # MFCC 
 Mel Frequency Cepstral Coefficients (MFCCs) are a feature extraction technique widely used in audio signal processing, especially for speech and music recognition. MFCCs aim to capture the spectral characteristics of an audio signal by measuring the energy distribution in frequency bands that are spaced according to the Mel scale, which is a perceptual scale of pitches that is more closely related to the way humans hear sound.
