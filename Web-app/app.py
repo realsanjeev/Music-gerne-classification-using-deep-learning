@@ -20,7 +20,6 @@ def recognize():
         except Exception as err:
             return render_template('sorry.html', message=f'Please provide a valid file: {err}')
         
-        print("[INFO] up")
         if music_file is None:
             return render_template('sorry.html', message='Please provide a valid file.')
         
@@ -32,15 +31,15 @@ def recognize():
         
         # Perform music recognition here
         music_mfcc = music_recognizer.get_mfcc(save_path)
-        print("-"*30)
         if music_mfcc is None:
           return render_template('sorry.html', message='Error loading in server')
-        print(music_mfcc.shape)
-        print("-"*30)
         predictions = music_recognizer.prediction(music_mfcc)
         path, result = music_recognizer.probability_graph_path(predictions)
         
-        return render_template("index.html", filename=music_file.filename, result=result)
+        return render_template("index.html",
+                                filename=path,
+                                music_path=f"music/{music_file.filename}",
+                                result=result)
     
     return render_template("index.html")
 

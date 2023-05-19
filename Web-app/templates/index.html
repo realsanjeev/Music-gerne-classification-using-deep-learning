@@ -15,6 +15,10 @@
       
 
     {% if result %}
+    <audio controls>
+      <source src="{{ url_for('static', filename=music_path) }}" type="audio/wav">
+    Your browser does not support the audio element.
+    </audio>
     <h1>The Genre of music is: {{result}}</h1>
     <img src="{{ url_for('static', filename=filename) }}" alt="plot of probability" />
 

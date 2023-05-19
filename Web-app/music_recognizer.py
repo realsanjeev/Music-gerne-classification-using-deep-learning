@@ -5,12 +5,11 @@ import numpy as np
 from matplotlib import pyplot as plt
 from tensorflow.keras.models import load_model
 
-
 SAMPLE_RATE = 22050
 SEGMENT_LENGTH = 6 #in sec
 MODEL_PATH = "./models/my_cnn_model_for_mfcc.h5"
 GENRES = ['blues', 'hiphop', 'rock', 'pop', 'disco', 'reggae', 'jazz', 'country', 'classical', 'metal']
-model = load_model("/workspaces/Music-gerne-classification-using-deep-learning/Web-app/models/my_cnn_model_for_mfcc.h5")
+model = load_model("./models/my_cnn_model_for_mfcc.h5")
 
 def get_mfcc(music_path, parts=5, n_mfcc=13, n_fft=2048, hop_length=512):
   # Divide given music in  6 sec segment
@@ -65,7 +64,7 @@ def probability_graph_path(prediction):
   plt.savefig(f"static/{path}", facecolor='y', bbox_inches="tight",
             pad_inches=0.3, transparent=True)
   
-  print(F"[INFO] lABEL: {np.argmax(mean_pred)}")
+  print(F"[INFO] LABEL: {np.argmax(mean_pred)}")
   genre_result = GENRES[np.argmax(mean_pred)]
 
   return path, genre_result
