@@ -12,6 +12,25 @@ GENRES = ['blues', 'hiphop', 'rock', 'pop', 'disco', 'reggae', 'jazz', 'country'
 model = load_model("./models/my_cnn_model_for_mfcc.h5")
 
 def get_mfcc(music_path, parts=5, n_mfcc=13, n_fft=2048, hop_length=512):
+  """
+  Extracts MFCC (Mel-frequency cepstral coefficients) features from audio segments of a given music file.
+
+  Args:
+      music_path (str): Path to the music file.
+      parts (int): Number of parts to divide the music file into for feature extraction. Default is 5.
+      n_mfcc (int): Number of MFCC coefficients to extract. Default is 13.
+      n_fft (int): Length of the FFT window. Default is 2048.
+      hop_length (int): Hop length (number of samples) between consecutive frames. Default is 512.
+
+  Returns:
+      np.array: Numpy array containing the extracted MFCC features for each segment of the music file.
+                The shape of the array is (num_segments, num_frames, num_mfcc, 1), where:
+                - num_segments: Number of segments in the music file.
+                - num_frames: Number of frames in each segment.
+                - num_mfcc: Number of MFCC coefficients.
+                - 1: Number of channels (set to 1 for compatibility with CNN models).
+
+  """
 
   samples_per_segment = SEGMENT_LENGTH* 22050
   mfcc_per_segment = math.ceil(samples_per_segment / hop_length)
@@ -40,12 +59,21 @@ def get_mfcc(music_path, parts=5, n_mfcc=13, n_fft=2048, hop_length=512):
       print(f"[INFO] {part} segment of {file} is not included ")
   return np.array(music_all_mfcc)
   
-
 def prediction(test_mfcc):
   prediction = model.predict(test_mfcc)
   return prediction
 
 def probability_graph_path(prediction):
+  """
+  Generates a probability graph based on the prediction array.
+
+  Args:
+      prediction (np.array): Numpy array containing the prediction probabilities for each class.
+
+  Returns:
+      tuple: A tuple containing the file path of the generated graph and the predicted genre label.
+
+  """
   mean_pred = np.mean(prediction, axis=0)
   plt.figure(figsize=(10, 5))
   plt.bar(GENRES, height=mean_pred*100)
