@@ -12,7 +12,7 @@ GENRES = ['blues', 'hiphop', 'rock', 'pop', 'disco', 'reggae', 'jazz', 'country'
 model = load_model("./models/my_cnn_model_for_mfcc.h5")
 
 def get_mfcc(music_path, parts=5, n_mfcc=13, n_fft=2048, hop_length=512):
-  # Divide given music in  6 sec segment
+
   samples_per_segment = SEGMENT_LENGTH* 22050
   mfcc_per_segment = math.ceil(samples_per_segment / hop_length)
   try:
