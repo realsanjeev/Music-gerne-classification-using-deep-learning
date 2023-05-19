@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block music %}
+
+<div>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="container">
+          <div class="file-input">
+            <input type="file" id="file" class="file" name="file" accept="wav/*" required>
+            <label for="file">Upload Music</label>
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      
+
+    {% if result %}
+    <h1>The Genre of music is: {{result}}</h1>
+    <img src="{{ url_for('static', filename=filename) }}" alt="plot of probability" />
+
+    {% endif %}</div>
+
+{% endblock music %}

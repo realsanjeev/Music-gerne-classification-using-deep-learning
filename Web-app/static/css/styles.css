@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    padding:0px;
+}
+
+body {
+    background: linear-gradient(to right, red, green);
+}
+
+.nav {
+    display: flex;
+    background-color: rgb(58, 56, 56);
+    color: white;
+    padding: 5px;
+}
+.nav-img {
+    height: 50px;
+    margin: 2px;
+    padding: 2px;
+}
+.nav-heading{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 8px;
+}
+.container{
+    display: flex;
+    margin:10px;
+    justify-content: center;
+}
+
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+
+        justify-content: center;
+        align-items: center;
+
+      }
+      
+  
+  
+  .file-input {
+    margin-bottom: 10px;
+  }
+  
+  .file-input label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

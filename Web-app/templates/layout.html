@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Genre Recognizer</title>
+    <link rel="stylesheet" href={{url_for("static", filename="css/styles.css")}}/>
+    <link rel="icon" href={{url_for("static", filename="images/music-icon.png")}} type="image/icon type">
+
+</head>
+<body>
+    <nav class="nav">
+        <a href="/"><img src={{url_for("static", filename="images/music-icon.png")}} alt="Music symbol logo" class="nav-img"/></a>
+        <h2 class="nav-heading">Music Genre Recognizer</h2>
+    </nav>
+    {% block music %}
+        
+    {% endblock music %}
+</body>
+</html>
