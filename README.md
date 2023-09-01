@@ -14,4 +14,17 @@ After the filterbank is applied, the logarithm of the filterbank energies is tak
 MFCCs are widely used in applications such as speech recognition, speaker identification, and music genre classification. They are popular because they are effective at capturing the spectral characteristics of a signal while reducing the dimensionality of the data, which can make subsequent processing and analysis more efficient.
 
 
+## Contributing
 
+Contributions are welcome! If you find any issues or want to add new features, feel free to submit a pull request.
+
+## Contact Me
+
+<table>
+  <tr>
+    <td><img src="https://github.com/realsanjeev/protfolio/blob/main/src/assets/images/instagram.png" alt="Instagram" width="50" height="50"></td>
+    <td><img src="https://github.com/realsanjeev/protfolio/blob/main/src/assets/images/twitter.png" alt="Twitter" width="50" height="50"></td>
+    <td><img src="https://github.com/realsanjeev/protfolio/blob/main/src/assets/images/github.png" alt="GitHub" width="50" height="50"></td>
+    <td><img src="https://github.com/realsanjeev/protfolio/blob/main/src/assets/images/linkedin-logo.png" alt="LinkedIn" width="50" height="50"></td>
+  </tr>
+</table>
